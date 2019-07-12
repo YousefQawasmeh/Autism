@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-arabic-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+    .fakeimg {
+      height: 200px;
+      background: #aaa;
+    }
+    </style>
+      <script>
+      function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className == "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+      }
+    </script>
+
+</head>
+<body>
+    <header>
+            <div class="up">
+                <div class="jumbotron text-center" style="margin-bottom:0;">
+                  <img src="Photo/puzzel.png" alt="" width="100px" height="70px">   
+                  <h2>مرض التوحد عند الأطقال</h2>
+            <p>حاول أن تساعد كل شخص مصاب بالتوحد</p>
+            <button class="bu"><a href="is-he.html">English</a></button>
+
+                </div>
+            
+        <div class="topnav" id="myTopnav">
+            <div class="topnav " id="yTopnav">
+                    <a href="arabic.html" >ما هو مرض التوحد؟</a>
+                    <a href="is-he-arabic.html" class="active">هل ابني يعاني من التوحد؟</a>
+                    <a href="help-arabic.html">كيف استطيع التعامل معه؟</a>
+                    <a href="win-arabic.html">قصص نجاح</a>
+                    <a href="Maps-arabic.html">خرائط</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+            </a>
+            
+        </div>
+        </div>
+    </header>
+    <section>
+            <form class="lol" id="chose1" onsubmit="return checked()">
+                    <input type="radio" name="f" value="10">Yes+<br>
+                    <input type="radio" name="f" value="5">Yes<br>
+                    <input type="radio" name="f" value="0">I dont know<br>
+                    <input type="radio" name="f" value="-5">No<br>
+                    <input type="radio" name="f"value="-10">No+<br>
+                    <input type="submit" value="submit">
+            </form>
+    </section>
+    <script>
+            window.onscroll = function() {yFunction()};
+            var myTopnav = document.getElementById("yTopnav");
+            var sticky = myTopnav.offsetTop;
+            var m = document.getElementById("m53");
+            var v = document.getElementById("m54");
+         
+            function checked(){
+            var ch = document.getElementsByName("f");
+           for(var i=0;i<6;i++){
+            if(ch[i].checked){
+            alert(i+(10-(6*i)));
+            }
+           }
+        }
+        
+            function yFunction() {
+              if (window.pageYOffset >= sticky) {
+                myTopnav.classList.add("sticky")
+              } else {
+                myTopnav.classList.remove("sticky");
+              }
+              
+              
+                if (window.pageYOffset >= st-80) {
+                  m.classList.add("stick");
+                  v.classList.add("st");
+                  m.classList.remove("hd");    
+                } else {
+                  m.classList.remove("stick");
+                  v.classList.remove("sty");
+                  m.classList.add("hd");
+                }
+                
+            }
+        </script>
+         
+</body>
+</html>
